@@ -1,0 +1,172 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before,*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+a:hover { 
+    cursor:pointer;  
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    color: black;
+}
+
+/*                                             Nav                        */
+.logo_container{
+    background-color: #222;
+}
+nav {
+    background-color: #222;
+}
+
+
+li > a{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.landing_page{
+    background-image: url(/images/landing_img.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 50px;
+    text-align: center;
+}
+.fa-bars{
+    display: none;
+}
+.slogan {
+    color: white;
+}
+
+/*                                  home page            */
+main {
+    color: black;
+}
+
+
+
+/*                              Footer              */
+footer{
+    background-color: #222;
+    color: white;
+}
+
+
+
+
+
+@media only screen and (max-width : 480px) {
+
+    /*                          Nav                       */
+    .logo_nav{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        padding: 10px;
+        background-color: #222;
+        width: 50%;
+        z-index: 1;
+        position: absolute;
+        display: none;
+        opacity: 0.9;
+    }
+    li > a{
+        margin-left: 40px;
+        padding: 5px 0;
+    }
+    .fa-bars{
+        display: block;
+        position: absolute;
+        color: white;
+        left: 15px;
+        top: 13px;
+    }
+
+
+
+
+    .landing_page{
+        padding: 70px 50px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*                          footer                  */
+    .footer_container{
+        margin-left: 25px;
+        padding: 20px 0;
+    }
+    .siamTravel_footer{
+        padding: 5px 0;
+        border-bottom: white 1px solid;
+    }
+    .footer_info{
+        padding: 10px 0;
+        line-height: 27px;
+    }
+    .footer_sosial_media{
+        padding: 10px 0;
+    }
+    .fa-facebook, .fa-instagram, .fa-twitter{
+        padding: 10px 10px;
+    }
+    .footer_newletters{
+        padding: 5px 0;
+    }
+    .footer_form{
+        padding: 10px 0;
+    }
+    #emailSub {
+        padding: 4px;
+        border: none;
+    }
+    #sub_button{
+        padding: 4px;
+        border: none;
+        background-color:#ee4d42;
+        color: white;
+        cursor: pointer;
+    }
+    .copyRight{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 769px) {
+
+}
