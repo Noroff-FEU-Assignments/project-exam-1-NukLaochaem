@@ -8,6 +8,7 @@ html {
 }
 a {
     text-decoration: none;
+    color: white;
 }
 a:hover { 
     cursor:pointer;  
@@ -23,6 +24,7 @@ body{
 }
 nav {
     background-color: #222;
+    display: block;
 }
 
 
@@ -36,7 +38,7 @@ li > a{
 .landing_page{
     background-image: url(/images/landing_img.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
     padding: 150px 50px;
@@ -56,7 +58,7 @@ main {
 
 
 
-/*                              Footer              */
+/*                              Footer                      */
 footer{
     background-color: #222;
     color: white;
@@ -66,17 +68,15 @@ footer{
 
 
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 520px) {
 
-    /*                          Nav                       */
+    /*                                    NAV   Mobile                */
     .logo_nav{
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
     }
     nav {
         padding: 10px;
-        background-color: #222;
         width: 50%;
         z-index: 1;
         position: absolute;
@@ -95,12 +95,56 @@ footer{
         top: 13px;
     }
 
-
-
-
     .landing_page{
         padding: 70px 50px;
     }
+/*                                       Home page            Mobile         */
+.latest_post_header{
+    padding: 20px;
+    margin: 10px;
+    text-decoration: underline;
+}
+.slider{
+    overflow: hidden;
+}
+.latest_post{
+    color: black;
+}
+.homepage_post_title{
+    padding: 15px 0;
+}
+.home_featured_img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+/*                                        Blog  page           Mobile          */
+.posts_header{
+    padding: 20px;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.blog_featured_img{
+    width: 100%;
+}
+.blog_post_title{
+    padding: 15px 0;
+}
+.post_container{
+    margin: 20px 0px;
+}
+.blog_post{
+    color: black;
+}
+
+
+
+
+
+/*                                       Singel blog           Mobile           */
 
 
 
@@ -108,15 +152,96 @@ footer{
 
 
 
+/*                                       About US    Mobile                       */
+.about_background{
+    background-image: url("/images/about.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    height: 330px;
+}
+.about_header{
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+.about_text_container{
+    padding: 25px;
+}
+.about_info_container{
+    background-color: #fdfbfb;
+}
+.about_info, .about_info2{
+    padding: 10px 0;
+}
 
 
 
 
+/*                                          contact             Mobile             */
+.contact_container{
+    padding-bottom: 50px;
+}
+.contact_header{
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+.background{
+    background-image: url("/images/contact.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: bottom;
+}
+.contact_form{
+    display: block;
+    text-align: left;
+    background-color: #dddddd;
+    border-radius: 8px;
+    padding: 0px 10px 15px 10px;
+    width: 70%;
+    margin: 0 auto;
+    -webkit-box-shadow: 6px 6px 18px 0px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow:    6px 6px 18px 0px rgba(50, 50, 50, 0.54);
+    box-shadow:         6px 6px 18px 0px rgba(50, 50, 50, 0.54);
+}
 
-    /*                          footer                  */
+input[type=text], textarea{
+    width: 100%;
+    padding: 13px ;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+textarea{
+    height: 140px;
+}
+
+#sumbit_contact{
+    width: 100%;
+    padding: 12px 12px 12px 12px;
+    margin: 10px 0 0px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+input[type=submit] :hover{
+    cursor: pointer;
+}
+label {
+    padding: 12px 12px 2px 0;
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+    /*                                     footer     Mobile                      */
     .footer_container{
         margin-left: 25px;
-        padding: 20px 0;
+        padding: 14px 0;
     }
     .siamTravel_footer{
         padding: 5px 0;
@@ -136,18 +261,22 @@ footer{
         padding: 5px 0;
     }
     .footer_form{
-        padding: 10px 0;
+        padding: 5px 0;
     }
     #emailSub {
         padding: 4px;
         border: none;
+        border-radius: 3px;
     }
     #sub_button{
         padding: 4px;
         border: none;
+        border-radius: 3px;
         background-color:#ee4d42;
         color: white;
+        text-align: center;
         cursor: pointer;
+        width: 90px;
     }
     .copyRight{
         text-align: center;
@@ -167,6 +296,6 @@ footer{
 @media only screen and (max-width: 768px) {
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 990px) {
 
 }

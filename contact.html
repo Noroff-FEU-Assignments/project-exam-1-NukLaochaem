@@ -27,57 +27,53 @@
             </nav>
 
 
-
-
         <main>
-            <h2>Contact us</h2>
-            <form class="contact_form" action="">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="full_name" name="fullname" placeholder="Your name..">
-
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Your email..">
-
-                <label for="subject">Subject</label>
-            </form>
-
+            <div class="background">
+                <h1 class="contact_header">Contact us</h1>
+                <div class="contact_background">
+                    <div class="contact_container">
+                        <form class="contact_form" action="">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="full_name" name="fullname" placeholder="Your name">
+            
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Your email">
+            
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
+            
+                            <label for="message">Your Message</label>
+                            <textarea name="message" id="message" placeholder="Your message.."></textarea>
+                            <input type="submit" value="Send" id="sumbit_contact">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
         </main>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         <footer>
             <div class="footer_container">
-                <h3 class="siamTravel_footer">Siam Travel</h3>
+                <h2 class="siamTravel_footer">Siam Travel</h2>
 
                 <div class="footer_info">
-                    <p>Our Story</p>
-                    <p>Contact Us</p>
+                    <a href="about.html">Our story</a> <br>
+                    <a href="contact.html">Contact us</a>
                 </div>
 
                 <div class="footer_sosial_media">
-                    <h4>Join our Communities</h4>
+                    <h3>Join our Communities</h3>
                     <i class="fab fa-facebook fa-lg"></i>
                     <i class="fab fa-instagram fa-lg"></i>
                     <i class="fab fa-twitter fa-lg"></i>
                 </div>
 
                 <div class="footer_newletters">
-                    <h4>Follow Our Journey</h4>
+                    <h3>Follow our Journey</h3>
                     <form class="footer_form" action="">
-                        <label for="email"></label>
-                        <input type="text" placeholder="Your Email Address" id="emailSub">
-                        <input type="submit" value="Subscribe" id="sub_button">
+                        <input type="emailSub" placeholder="Your Email Address" id="emailSub">
+                        <input type="sub_button" value="Subscribe" id="sub_button">
                     </form>
                 </div>
             </div>
@@ -85,7 +81,6 @@
                 <p>©2021 SiamTravel <span>|</span> Site by Nuk Laochaem </p>
             </div>
         </footer>
-        <script src="js/index.js"></script>
+        <script src="js/contact.js"></script>
     </body>
-
 </html>
