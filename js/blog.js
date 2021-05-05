@@ -14,10 +14,10 @@ async function api(){
 
         for(let i = 0; i < blogPost.length; i++){
             if(i > 9){
-                hiddenPost.innerHTML +=`  <a href="singleBlog.html" class="hidden_post">
+                hiddenPost.innerHTML +=`<a href="singleBlog.html" class="hidden_post">
                                         <h2 class="blog_post_title">${blogPost[i].title.rendered}</h2>
                                         <img class="blog_featured_img" src="${blogPost[i].featured_media_src_url}"></img>
-                                    </a`
+                                        </a`
             } else {
                 post.innerHTML +=`  <a href="singleBlog.html" class="blog_post">
                                         <h2 class="blog_post_title">${blogPost[i].title.rendered}</h2>
@@ -37,10 +37,12 @@ const viewMore = document.querySelector(".view_more_Btn")
 viewMore.addEventListener("click", morePost)
 
 function morePost (event){
-    if(hiddenPost.style.display = "block"){
+    if(hiddenPost.style.display === "none"){
+        hiddenPost.style.display = "block"
         viewMore.innerHTML = "View less"
     } else {
         hiddenPost.style.display = "none";
         viewMore.innerHTML = "View more"
     }
 }
+console.log(morePost);
