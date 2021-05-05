@@ -1,25 +1,48 @@
-const fullName = document.querySelector(".fullname_error")
-const email = document.querySelector(".email_error")
-const subject = document.querySelector(".subject_error")
-const message = document.querySelector(".message_error")
+const fullName = document.querySelector("#full_name")
+const nameError = document.querySelector(".fullname_error")
 
-const sumbit = document.querySelector("#sumbit_contact")
+const email = document.querySelector("#email")
+const emailError = document.querySelector(".email_error")
+
+const subject = document.querySelector("#subject")
+const subjectError = document.querySelector(".subject_error")
+
+const message = document.querySelector("#message")
+const messageError = document.querySelector(".message_error")
+
+
 const form = document.querySelector(".contact_form")
+const sumbit = document.querySelector("#sumbit_contact")
 
 function validateCheck (event){
     event.preventDefault();
 
-    if(checkLength(fullName.value, 5) === true) {
+    if(checkLength(fullName.value, 4) === true) {
         nameError.style.display = "none";
     } else{
         nameError.style.display = "inline-block";
-        return;
     }
+
+    if(validateEmail(email.value) === true){
+        emailError.style.display = "none";
+    } else {
+        emailError.style.display = "inline-block"
+    }
+
+    if(checkLength(subject.value, 14)=== true){
+        subjectError.style.display = "none";
+    } else {
+        subjectError.style.display = "inline-block"
+    }
+
+    if(checkLength(message.value, 24 ) === true){
+        messageError.style.display = "none";
+    } else {
+        messageError.style.display = "inline-block"
+    }
+
 };
-
-form.addEventListener("sumbit", validateCheck)
-
-
+form.addEventListener("submit", validateCheck);
 
 function checkLength(value, len){
     if(value.trim().length > len){

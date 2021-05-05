@@ -139,6 +139,22 @@ footer{
 .blog_post{
     color: black;
 }
+.hidden_post{
+    display: none;
+    color: red;
+}
+
+.view_more_Btn{
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    padding: 5px;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    margin: 0 auto;
+    height: 30px;
+    width: 90px;
+}
 
 
 
@@ -246,8 +262,6 @@ label {
     display: inline-block;
     display: none;
 }
-
-
 
 
     /*                                     footer     Mobile                      */
