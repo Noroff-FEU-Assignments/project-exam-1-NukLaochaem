@@ -33,16 +33,16 @@
                 <div class="contact_background">
                     <div class="contact_container">
                         <form class="contact_form" action="">
-                            <label for="fullname">Full Name</label>
+                            <label for="fullname">Full Name<span class="fullname_error error">*Must be at least 5 characters in length</span></label>
                             <input type="text" id="full_name" name="fullname" placeholder="Your name">
             
-                            <label for="email">Email</label>
+                            <label for="email">Email<span class="email_error error">*Please enter a valid email address</span></label>
                             <input type="text" id="email" name="email" placeholder="Your email">
             
-                            <label for="subject">Subject</label>
+                            <label for="subject">Subject<span class="subject_error error">*Must be more then 15 characters long</span></label>
                             <input type="text" name="subject" id="subject" placeholder="Subject">
             
-                            <label for="message">Your Message</label>
+                            <label for="message">Message <span class="message_error error">*Message must be minium 25 characters</span></label>
                             <textarea name="message" id="message" placeholder="Your message.."></textarea>
                             <input type="submit" value="Send" id="sumbit_contact">
                         </form>

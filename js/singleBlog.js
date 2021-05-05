@@ -12,13 +12,13 @@ async function api(){
         console.log(blogPost);
 
         for(let i = 0; i < blogPost.length; i++){
-            if(i > 10){
+            if(i === 1){
             break;
             }
             post.innerHTML +=`  <div href="singleBlog.html" class="blog">
                                 <h1 class="blog_post_title">${blogPost[i].title.rendered}</h1>
-                                <p class="blog_post_title">${blogPost[i].content.rendered}</p>
-                                <p class="blog_post_title">${blogPost[i].excerpt.rendered}</p>
+                                <p class="blog_post_content">${blogPost[i].content.rendered}</p>
+                                <p class="blog_post_title"></p>
                                 
                                 </div`
         }
