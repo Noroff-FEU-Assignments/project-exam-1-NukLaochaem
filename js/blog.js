@@ -9,20 +9,22 @@ async function api(){
     try{
         const response = await fetch(wordPress);
         const blogPost = await response.json(response);
-
         console.log(blogPost);
-
         for(let i = 0; i < blogPost.length; i++){
             if(i > 9){
-                hiddenPost.innerHTML +=`<a href="singleBlog.html" class="hidden_post">
-                                        <h2 class="blog_post_title">${blogPost[i].title.rendered}</h2>
-                                        <img class="blog_featured_img" src="${blogPost[i].featured_media_src_url}"></img>
-                                        </a`
+                hiddenPost.innerHTML +=`<div class="blog_post">
+                                            <a href="singleBlog.html?id=${blogPost[i].id}">
+                                            <img class="blog_featured_img" src="${blogPost[i].featured_media_src_url}"></img>
+                                            <h2 class="blog_post_title">${blogPost[i].title.rendered}</h2>
+                                            </a>
+                                        </div>`;
             } else {
-                post.innerHTML +=`  <a href="singleBlog.html" class="blog_post">
-                                        <h2 class="blog_post_title">${blogPost[i].title.rendered}</h2>
+                post.innerHTML +=`  <div class="blog_post">  
+                                        <a href="singleBlog.html?id=${blogPost[i].id}">
                                         <img class="blog_featured_img" src="${blogPost[i].featured_media_src_url}"></img>
-                                    </a`
+                                        <h2 class="blog_post_title">${blogPost[i].title.rendered}</h2>
+                                        </a
+                                    </div>`
             }
         }
     } catch (error){
@@ -30,10 +32,9 @@ async function api(){
         post.innerHTML = `<h4 class="error">Error! Something went wrong! Error has occurred.  </h4>`;
     }
 }
+
 api()
-
 const viewMore = document.querySelector(".view_more_Btn")
-
 viewMore.addEventListener("click", morePost)
 
 function morePost (event){
@@ -46,3 +47,20 @@ function morePost (event){
     }
 }
 console.log(morePost);
+
+
+
+
+const hamburger = document.querySelector(".fa-bars")
+const nav = document.querySelector("nav")
+
+
+hamburger.addEventListener("click", openClose)
+
+function openClose(event){
+    if(nav.style.display === "block"){
+        nav.style.display = "none"
+    } else {
+        nav.style.display = "block"
+    }
+}

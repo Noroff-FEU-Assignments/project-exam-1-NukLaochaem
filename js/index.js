@@ -28,10 +28,12 @@ async function api(){
         if(i===4){
             break;
         }
-        latestPost.innerHTML +=`<a href="singleBlog.html" class="latest_post">
-                                <h2 class="homepage_post_title">${blogPost[i].title.rendered}</h2>
-                                <img class="home_featured_img" src="${blogPost[i].featured_media_src_url}"></img>
-                                </a`
+        latestPost.innerHTML +=`<div class="latest_post">
+                                    <a href="singleBlog.html?id=${blogPost[i].id}">
+                                    <img class="home_featured_img" src="${blogPost[i].featured_media_src_url}"></img>
+                                    <h2 class="homepage_post_title">${blogPost[i].title.rendered}</h2>
+                                    </a
+                                </div>`
     }
 
     } catch (error){

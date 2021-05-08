@@ -1,3 +1,19 @@
+const hamburger = document.querySelector(".fa-bars")
+const nav = document.querySelector("nav")
+
+
+hamburger.addEventListener("click", openClose)
+
+function openClose(event){
+    if(nav.style.display === "block"){
+        nav.style.display = "none"
+    } else {
+        nav.style.display = "block"
+    }
+}
+
+
+
 const fullName = document.querySelector("#full_name")
 const nameError = document.querySelector(".fullname_error")
 
