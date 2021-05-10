@@ -45,5 +45,18 @@ api()
 
 
 
-var slide = document.querySelector(".latest_post");
+var arrowLeft = document.querySelector(".left");
+var arrowRight = document.querySelector(".right");
+index = 0;
+
+
+arrowLeft.addEventListener("click", function(){
+    index = (index > 0) ? index -1 : 0;
+    latestPost.style.transform = "translate("+(index)* -25 +"%)";
+})
+
+arrowRight.addEventListener("click", function(){
+    index = (index < 4 - 1 ) ? index+1 : 3;
+    latestPost.style.transform = "translate("+(index)* -25 +"%)";
+})
 

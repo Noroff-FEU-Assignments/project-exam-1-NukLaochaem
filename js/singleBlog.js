@@ -24,6 +24,9 @@ const wordPress = corsFix + wordPressBlogs;
 
 
 const post = document.querySelector(".post")
+const title = document.querySelector("title")
+
+
 
 async function api(){
     try{
@@ -31,16 +34,29 @@ async function api(){
         const blogPost = await response.json(response);
 
         console.log(blogPost);
-
             
             post.innerHTML +=`  <div class="blog">
-                                <h1 class="blog_post_title">${blogPost.title.rendered}</h1>
-                                <p class="blog_post_content">${blogPost.content.rendered}</p>
-                                <p class=""></p>
+                                    <h1 class="blog_post_title">${blogPost.title.rendered}</h1>
+                                    <p class="blog_post_content">${blogPost.content.rendered}</p>
+                                    <p class=""> </p>
                                 </div`;
+            title.innerHTML = `${blogPost.title.rendered}`
     } catch (error){
         console.log(error)
         post.innerHTML = `<h4 class="error">Error! Something went wrong! Error has occurred.  </h4>`;
     }
 }
 api()
+
+
+const open = document.querySelector(".open_modal");
+const modalBackGround = document.querySelector(".modal_background")
+const close = document.querySelector(".close_modal")
+
+open.addEventListener("click", ()=>{
+    modalBackGround.classList.add("show");
+});
+
+close.addEventListener("click", ()=>{
+    modalBackGround.classList.remove("show");
+})
