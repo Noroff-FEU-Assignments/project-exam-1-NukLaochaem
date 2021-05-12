@@ -129,9 +129,10 @@ main {
 
 .controller .arrow{
     position: absolute;
-    top: 120%;
+    top: 90%;
     color: black;
     cursor: pointer;
+    padding: 10px;
 }
 .left{
     left: 7px;
@@ -191,7 +192,7 @@ main {
 }
 .hidden_post{
     display: none;
-    
+    display: flex;
 }
 
 .view_more_btn_container{
@@ -321,7 +322,7 @@ figure > img{
     color: black;
     border-radius: 8px;
     padding: 0px 12px 15px 12px;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     -webkit-box-shadow: 6px 6px 18px 0px rgba(50, 50, 50, 0.54);
     -moz-box-shadow:    6px 6px 18px 0px rgba(50, 50, 50, 0.54);
@@ -345,13 +346,13 @@ textarea{
     padding: 12px 12px 12px 12px;
     margin: 10px 0 0px 0;
     border-radius: 4px;
-    background-color: #e2e2e2;
+    background-color: #dadada;
     font-size: 1rem;
     font-weight: 600;
     border: none;
 }
 #sumbit_contact:hover{
-    background-color: #c2c1c1;
+    background-color: #b9b8b8;
     cursor: pointer;
 
 }
@@ -401,6 +402,7 @@ footer{
 
 .fa-facebook, .fa-instagram, .fa-twitter{
     padding: 10px 10px;
+    cursor: pointer;
 }
 
 .footer_newletters{

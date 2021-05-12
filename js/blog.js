@@ -39,7 +39,7 @@ viewMore.addEventListener("click", morePost)
 
 function morePost (event){
     if(hiddenPost.style.display === "none"){
-        hiddenPost.style.display = "flex"
+        hiddenPost.style.display = "block"
         viewMore.innerHTML = "View less"
     } else {
         hiddenPost.style.display = "none";
