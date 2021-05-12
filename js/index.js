@@ -17,6 +17,9 @@ const wordPressBlogs = "http://nuklaochaem.one/SiamTravel/wp-json/wp/v2/posts";
 const wordPress = corsFix + wordPressBlogs;
 const latestPost = document.querySelector(".slider")
 
+const morePost = document.querySelector(".more_posts_container")
+const latestPostHeader = document.querySelector(".latest_post_header")
+
 async function api(){
     try{
         const response = await fetch(wordPress);
@@ -35,7 +38,8 @@ async function api(){
                                     </a
                                 </div>`
     }
-
+    morePost.style.display = "block"
+    latestPostHeader.style.display = "block"
     } catch (error){
         console.log(error)
         latestPost.innerHTML = `<h4 class="error">Error! Something went wrong! Error has occurred.  </h4>`;

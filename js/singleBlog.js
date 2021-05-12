@@ -32,31 +32,43 @@ async function api(){
     try{
         const response = await fetch(wordPress);
         const blogPost = await response.json(response);
-
         console.log(blogPost);
-            
-            post.innerHTML +=`  <div class="blog">
-                                    <h1 class="blog_post_title">${blogPost.title.rendered}</h1>
-                                    <p class="blog_post_content">${blogPost.content.rendered}</p>
-                                    <p class=""> </p>
-                                </div`;
-            title.innerHTML = `${blogPost.title.rendered}`
+
+        post.innerHTML +=`  <div class="blog">
+                                <h1 class="blog_post_title">${blogPost.title.rendered}</h1>
+                                <figure class="open_modal">${blogPost.content.rendered}</figure>
+                            </div`
+        title.innerHTML = `${blogPost.title.rendered}`
+
+
+
     } catch (error){
         console.log(error)
-        post.innerHTML = `<h4 class="error">Error! Something went wrong! Error has occurred.  </h4>`;
+        post.innerHTML += `<h4 class="">Error! Something went wrong! Error has occurred.</h4>`;
     }
 }
 api()
-
 
 const open = document.querySelector(".open_modal");
 const modalBackGround = document.querySelector(".modal_background")
 const close = document.querySelector(".close_modal")
 
-open.addEventListener("click", ()=>{
-    modalBackGround.classList.add("show");
-});
+
+
+document.querySelectorAll(".open_modal").forEach(open => {
+    open.addEventListener('click', event => {
+        modalBackGround.classList.add("show");
+    })
+})
+
 
 close.addEventListener("click", ()=>{
     modalBackGround.classList.remove("show");
 })
+
+
+
+
+
+
+

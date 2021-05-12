@@ -41,7 +41,7 @@ nav {
 
 .logo_nav{
     display: block;
-    margin: auto;
+    margin: 0 auto;
 }
 
 li > a{
@@ -68,9 +68,9 @@ li > a{
     display: block;
     position: absolute;
     color: white;
-    left: 15px;
-    top: 13px;
+    left: 10px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .slogan {
@@ -85,15 +85,18 @@ main {
 
 .latest_post_header{
     padding: 20px;
-    margin: 10px;
+    font-size: 1.8rem;
+    display: none;
+    text-align: center;
     text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .latest_post{
     color: "";
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 4px 8px 3px rgb(0 0 0 / 5%);
-    margin: 10px;
-    padding: 10px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 4px 8px 3px rgb(0 0 0 / 7%);
+    margin: 30px;
+    padding: 20px;
     border-radius: 10px;
 }
 
@@ -107,11 +110,6 @@ main {
     height: auto;
 }  
 
-.carousel_container{
-    width: 90%;
-    margin: 10px auto;
-
-}
 .carousel{
     height: auto;
     position: relative;
@@ -131,21 +129,23 @@ main {
 
 .controller .arrow{
     position: absolute;
-    top: 110%;
-    color: white;
+    top: 120%;
+    color: black;
     cursor: pointer;
 }
 .left{
-    left: 50px;
+    left: 7px;
 }
 .right{
-    right: 50px;
+    right: 7px;
 }
 
 
 .more_posts_container{
     text-align: end;
-    padding: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    display: none;
 }
 .more_posts{
     font-size: 1rem;
@@ -164,6 +164,8 @@ main {
     padding: 10px;
     margin: 10px;
     text-decoration: underline;
+    text-underline-offset: 3px;
+    text-align: center;
 }
 
 .blog_featured_img{
@@ -172,7 +174,7 @@ main {
 }
 
 .blog_post_title{
-    padding: 15px 0;
+    margin: 15px;
     color: black;
 }
 
@@ -182,9 +184,9 @@ main {
 
 .blog_post{
     color: black;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 4px 8px 3px rgb(0 0 0 / 5%);
-    margin: 20px;
-    padding: 15px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 4px 8px 3px rgb(0 0 0 / 10%);
+    margin: 30px 15px;
+    padding: 20px;
     border-radius: 10px;
 }
 .hidden_post{
@@ -192,6 +194,13 @@ main {
     
 }
 
+.view_more_btn_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+}
 .view_more_Btn{
     font-size: 1.1rem;
     font-weight: 500;
@@ -199,9 +208,9 @@ main {
     padding: 8px;
     background-color: rgb(63, 63, 63);
     color: white;
-
-
-}
+    text-align: center;
+    cursor: pointer;
+} 
 
 /*                                                   Singel blog                                             */
 
@@ -211,16 +220,19 @@ main {
 .blog {
     display: "";
 }
+
 figure > img{
-    width: 50%;
+    width: 100%;
     height: auto;
     cursor: pointer;
 }
 .wp-block-media-text__content> h2{
-    font-size: "";
+    margin: 15px;
 }
 .wp-block-media-text__content> p{
-    display: "";
+    margin: 20px;
+    font: 1.6rem;
+    font-weight: 500;
 }
 .modal_background{
     position: fixed;
@@ -242,10 +254,9 @@ figure > img{
     opacity: 1;
 }
 
-
 .modal{
     background-color: white;
-    padding: 10px;
+    padding: 15px;
     max-width: 80%;
 }
 .close_modal{
@@ -306,19 +317,21 @@ figure > img{
 .contact_form{
     display: block;
     text-align: left;
-    background-color: #dddddd;
+    background-color: white;
+    color: black;
     border-radius: 8px;
-    padding: 0px 10px 15px 10px;
+    padding: 0px 12px 15px 12px;
     width: 60%;
     margin: 0 auto;
     -webkit-box-shadow: 6px 6px 18px 0px rgba(50, 50, 50, 0.54);
     -moz-box-shadow:    6px 6px 18px 0px rgba(50, 50, 50, 0.54);
     box-shadow:         6px 6px 18px 0px rgba(50, 50, 50, 0.54);
+
 }
 
 input[type=text], textarea{
     width: 100%;
-    padding: 13px ;
+    padding: 10px ;
     border-radius: 4px;
     border: 1px solid #ccc;
 }
@@ -332,20 +345,24 @@ textarea{
     padding: 12px 12px 12px 12px;
     margin: 10px 0 0px 0;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    background-color: #e2e2e2;
     font-size: 1rem;
     font-weight: 600;
+    border: none;
+}
+#sumbit_contact:hover{
+    background-color: #c2c1c1;
+    cursor: pointer;
+
 }
 
-input[type=submit] :hover{
-    cursor: pointer;
-}
 
 label {
     padding: 12px 12px 2px 0;
     display: inline-block;
     margin-left: 5px;
     font-weight: 600;
+
 }
 
 .error{
@@ -421,16 +438,239 @@ footer{
 
 
 
+@media only screen and (min-width: 520px) {
+    /*                                Home page  00000000000000000000000000000000000000000000000000000000000000        */
+    .landing_page{
+        height: 250px;
+    }
+    .slogan {
+        margin-top: 20px;
+    }
+    
+    .latest_post{
+        margin: 10px 130px;
+        padding: 25px;
+    }
+    
+    .controller .arrow{
+        position: absolute;
+        top: 120%;
+        color: black;
+        cursor: pointer;
+    }
+    .controller .arrow{
+        top: 95%;
+    }
+    .left{
+        left: 12px;
+    }
+    .right{
+        right: 12px;
+    }
+    
+    /*                                                 Blog page   tablet                         */
+    
+    .posts_header{
+        padding: 10px;
+        margin: 10px;
+        text-decoration: underline;
+        text-align: center;
+    }
+        
+    .post_container{
+        margin: 20px;
+    }
+    .posts{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(auto, auto);
+    }
+    .blog_post{
 
+        padding: 0;
+    }
 
+    .blog_featured_img{
+        width: 100%;
+        height: auto;
+    }
+    .hidden_post{
+        display: none;
+    }
+    
+    /*                                                   Singel blog                                             */
+    
+    .blog_post_content{
+        display: "";
+    }
+    .blog {
+        display: "";
+    }
+    figure > img{
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    .wp-block-media-text__content> h2{
+        font-size: 1.7rem;
+        margin-left: 20px;
+    }
+    .wp-block-media-text__content> p{
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+    .modal_background{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: visibility 0s, opacity 0.5s;
+        pointer-events: none;
+        opacity: 0;
+    }
+    
+    .modal_background.show{
+        pointer-events: auto;
+        opacity: 1;
+    }
+    
+    .modal{
+        background-color: white;
+        padding: 10px;
+        max-width: 80%;
+    }
 
-
-
-
-
-@media only screen and (max-width: 768px) {
 }
 
-@media only screen and (min-width: 990px) {
 
+
+
+
+@media only screen and (min-width: 980px) {
+    /*                                Home page desktop 222222222222222222222222222222222222222222222222222222222       */
+    .landing_page{
+        height: 250px;
+    }
+    .slogan {
+        margin-top: 20px;
+    }
+    
+    .latest_post{
+        margin: 10px 130px;
+        padding: 25px;
+    }
+    
+    .controller .arrow{
+        position: absolute;
+        top: 120%;
+        color: black;
+        cursor: pointer;
+    }
+    .controller .arrow{
+        top: 95%;
+    }
+    .left{
+        left: 12px;
+    }
+    .right{
+        right: 12px;
+    }
+    
+    /*                                                 Blog page   desktop                         */
+    
+    .posts_header{
+        padding: 10px;
+        margin: 10px;
+        text-decoration: underline;
+        text-align: center;
+    }
+        
+    .post_container{
+        margin: 20px;
+    }
+    .posts{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(auto, auto);
+    }
+    .blog_post{
+
+        padding: 0;
+    }
+
+    .blog_featured_img{
+        width: 100%;
+        height: auto;
+    }
+    .hidden_post{
+        display: none;
+    }
+    
+    /*                                                   Singel blog   desktop                                         */
+    
+    .blog_post_content{
+        display: "";
+    }
+    .blog {
+        display: "";
+    }
+    figure > img{
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    .wp-block-media-text__content> h2{
+        font-size: 1.7rem;
+        margin-left: 20px;
+    }
+    .wp-block-media-text__content> p{
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+    .modal_background{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: visibility 0s, opacity 0.5s;
+        pointer-events: none;
+        opacity: 0;
+    }
+    
+    .modal_background.show{
+        pointer-events: auto;
+        opacity: 1;
+    }
+    
+    .modal{
+        background-color: white;
+        padding: 10px;
+        max-width: 80%;
+    }
+
+    /*                                   Footer       desktop                                 */
 }
+
+
+
+
+/*  
+
+silder nav / arrow moving
+modal
+logo click
+latest post rom / singel blog style
+contact color
+loading footer got up
+singel blog header, space
+*/
