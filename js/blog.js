@@ -11,7 +11,7 @@ async function api(){
         const blogPost = await response.json(response);
         console.log(blogPost);
         for(let i = 0; i < blogPost.length; i++){
-            if(i > 9){
+            if(i > 7){
                 hiddenPost.innerHTML +=`<div class="blog_post">
                                             <a href="singleBlog.html?id=${blogPost[i].id}">
                                             <img class="blog_featured_img" src="${blogPost[i].featured_media_src_url}"></img>
@@ -39,7 +39,7 @@ viewMore.addEventListener("click", morePost)
 
 function morePost (event){
     if(hiddenPost.style.display === "none"){
-        hiddenPost.style.display = "block"
+        hiddenPost.style.display = "grid"
         viewMore.innerHTML = "View less"
     } else {
         hiddenPost.style.display = "none";

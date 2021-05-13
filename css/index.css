@@ -27,6 +27,7 @@ body{
 
 .logo_container{
     background-color: #222;
+
 }
 
 nav {
@@ -52,6 +53,7 @@ li > a{
     margin-left: 40px;
     padding: 5px 0;
 }
+
 
 .landing_page{
     background-image: url(/images/landing_img.jpg);
@@ -129,10 +131,13 @@ main {
 
 .controller .arrow{
     position: absolute;
-    top: 90%;
+    top: 45%;
     color: black;
     cursor: pointer;
     padding: 10px;
+}
+.controller .arrow:hover{
+    background-color: rgb(158, 158, 158);
 }
 .left{
     left: 7px;
@@ -461,7 +466,7 @@ footer{
         cursor: pointer;
     }
     .controller .arrow{
-        top: 95%;
+        top: 45%;
     }
     .left{
         left: 12px;
@@ -554,9 +559,49 @@ footer{
 
 
 @media only screen and (min-width: 980px) {
-    /*                                Home page desktop 222222222222222222222222222222222222222222222222222222222       */
+    /*                                                Nav        2222222222222222222222222222222                */
+    .logo_nav{
+        margin: 0 auto;
+        position: absolute;
+        margin: 2px 0px 0px 25px;
+
+    }
+    nav {
+        background-color: #222;
+        padding: 10px;
+        display: block;
+        opacity: 1;
+        width: 100%;
+        text-align: end;
+        position: static;
+    }
+
+    ul li {
+        display: inline;
+        text-align: end;
+    }
+    li > a{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+        margin:  0 40px;
+        padding: 5px;
+    }
+    li > a:hover{
+
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+
+
+
+    /*                                   homepage desktop                                       */
     .landing_page{
-        height: 250px;
+        height: 270px;
     }
     .slogan {
         margin-top: 20px;
@@ -565,6 +610,7 @@ footer{
     .latest_post{
         margin: 10px 130px;
         padding: 25px;
+
     }
     
     .controller .arrow{
@@ -574,7 +620,7 @@ footer{
         cursor: pointer;
     }
     .controller .arrow{
-        top: 95%;
+        top: 50%;
     }
     .left{
         left: 12px;
@@ -582,7 +628,7 @@ footer{
     .right{
         right: 12px;
     }
-    
+
     /*                                                 Blog page   desktop                         */
     
     .posts_header{
@@ -597,7 +643,7 @@ footer{
     }
     .posts{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
         grid-auto-rows: minmax(auto, auto);
     }
     .blog_post{
@@ -661,6 +707,56 @@ footer{
     }
 
     /*                                   Footer       desktop                                 */
+    
+    footer{
+        background-color: #222;
+        color: white;
+    }
+
+    .footer_container{
+        margin: 0 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(auto, auto);
+        align-items: center;
+        padding: 0;
+    }
+
+    .siamTravel_footer{
+        padding: 5px 0;
+        border-bottom: none;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer_info{
+        padding: 10px 0;
+        line-height: 27px;
+        margin-left: 60px;
+    }
+
+    .footer_sosial_media{
+        padding: 10px 0;
+        justify-self: center;
+    }
+
+    .fa-facebook, .fa-instagram, .fa-twitter{
+        padding: 10px 10px;
+        margin: 10px 0 0 7px;
+        cursor: pointer;
+
+    }
+
+    .footer_newletters{
+        padding: 5px 0;
+        justify-self: end;
+    }
+
+    .footer_form{
+        padding: 5px 0;
+        margin-top: 10px;
+    }
 }
 
 
@@ -668,11 +764,22 @@ footer{
 
 /*  
 
-silder nav / arrow moving
+silder nav 
+loading / error message
+
+
 modal
-logo click
-latest post rom / singel blog style
-contact color
-loading footer got up
-singel blog header, space
+
+
+
+hover over, tekst nav footer, etc
+
+
+/singel blog header space
+/ contact color 
+/ loading footer got up 
+/ latest post rom 
+/ singel blog style 
+/ logo click tablet/nav
+/text inside blogs?
 */
