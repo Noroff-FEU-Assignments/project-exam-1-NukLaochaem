@@ -51,16 +51,30 @@ api()
 
 var arrowLeft = document.querySelector(".left");
 var arrowRight = document.querySelector(".right");
-index = 0;
+const indicatorContainer = document.querySelector(".controller ul");
+sectionIndex = 0;
 
+
+document.querySelectorAll(".controller li").forEach(function(indicator, ind){
+    indicator.addEventListener("click", function(){
+        sectionIndex = ind
+        document.querySelector(".controller .selected").classList.remove("selected");
+        indicator.classList.add("selected")
+        latestPost.style.transform = "translate(" + (ind) * -25 +"%)";
+    })
+})
 
 arrowLeft.addEventListener("click", function(){
-    index = (index > 0) ? index -1 : 0;
-    latestPost.style.transform = "translate("+(index)* -25 +"%)";
+    sectionIndex = (sectionIndex > 0) ? sectionIndex -1 : 0;
+    document.querySelector(".controller .selected").classList.remove("selected");
+    indicatorContainer.children[sectionIndex].classList.add("selected"); 
+    latestPost.style.transform = "translate(" + (sectionIndex) * -25 +"%)";
 })
 
 arrowRight.addEventListener("click", function(){
-    index = (index < 4 - 1 ) ? index+1 : 3;
-    latestPost.style.transform = "translate("+(index)* -25 +"%)";
+    sectionIndex = (sectionIndex < 4 - 1 ) ? sectionIndex+1 : 3;
+    document.querySelector(".controller .selected").classList.remove("selected");
+    indicatorContainer.children[sectionIndex].classList.add("selected");
+    latestPost.style.transform = "translate(" + (sectionIndex) * -25 +"%)";
 })
 

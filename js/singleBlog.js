@@ -18,7 +18,7 @@ const blogId = params.get("id");
 
 
 const corsFix = "https://noroffcors.herokuapp.com/"
-const wordPressBlogs = "http://nuklaochaem.one/SiamTravel/wp-json/wp/v2/posts/" + `${blogId}`;
+const wordPressBlogs = "https://nuklaochaem.one/SiamTravel/wp-json/wp/v2/posts/" + `${blogId}`;
 const wordPress = corsFix + wordPressBlogs;
 
 

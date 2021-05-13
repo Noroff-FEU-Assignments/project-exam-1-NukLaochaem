@@ -99,6 +99,7 @@ main {
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 4px 8px 3px rgb(0 0 0 / 7%);
     margin: 30px;
     padding: 20px;
+    padding-bottom: 30px;
     border-radius: 10px;
 }
 
@@ -121,7 +122,6 @@ main {
     height: 100%;
     display: flex;
     width: 400%;
-
     transition: all 0.4s;
 }
 
@@ -144,6 +144,30 @@ main {
 }
 .right{
     right: 7px;
+}
+
+.controller ul{
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.controller ul li{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.controller ul li.selected{
+    background-color: #333;
 }
 
 
@@ -606,7 +630,10 @@ footer{
     .slogan {
         margin-top: 20px;
     }
-    
+    .carousel{
+        width: "";
+    }
+
     .latest_post{
         margin: 10px 130px;
         padding: 25px;
