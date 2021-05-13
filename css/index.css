@@ -593,7 +593,7 @@ footer{
         text-underline-offset: 3px;
     }
 
-    .fa-bars{
+    .hamburger{
         display: none;
     }
 
@@ -734,11 +734,13 @@ footer{
         padding: 10px 0;
         line-height: 27px;
         margin-left: 60px;
+        padding-bottom: 0px;
     }
 
     .footer_sosial_media{
         padding: 10px 0;
         justify-self: center;
+        padding-bottom: 0px;
     }
 
     .fa-facebook, .fa-instagram, .fa-twitter{
@@ -751,6 +753,7 @@ footer{
     .footer_newletters{
         padding: 5px 0;
         justify-self: end;
+        padding-bottom: 0px;
     }
 
     .footer_form{
