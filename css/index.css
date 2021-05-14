@@ -23,6 +23,7 @@ body{
     color: black;
 }
 
+
 /*                                                Nav                        */
 
 .logo_container{
@@ -77,6 +78,7 @@ li > a{
 
 .slogan {
     color: white;
+    letter-spacing: 2px;
 }
 
 /*                                                   home page                              */
@@ -95,16 +97,13 @@ main {
 }
 
 .latest_post{
-    color: "";
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 4px 8px 3px rgb(0 0 0 / 7%);
-    margin: 30px;
-    padding: 20px;
-    padding-bottom: 30px;
+    margin: 80px;
     border-radius: 10px;
 }
 
 .homepage_post_title{
-    padding: 15px 0;
+    padding: 10px;
     color: black;
 }
 
@@ -148,13 +147,11 @@ main {
 
 .controller ul{
     position: absolute;
-    bottom: 13px;
+    bottom: 30px;
     left: 50%;
     transform: translate(-50%);
     list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
 }
 
 .controller ul li{
@@ -174,7 +171,7 @@ main {
 .more_posts_container{
     text-align: end;
     padding: 20px;
-    margin: 15px 0;
+    margin: 30px 0;
     display: none;
 }
 .more_posts{
@@ -206,22 +203,24 @@ main {
 .blog_post_title{
     margin: 15px;
     color: black;
+
 }
 
 .post_container{
-    margin: 20px 0px;
+    margin-bottom: 20px;
+}
+.posts{
+    padding: 0px 30px;
 }
 
 .blog_post{
     color: black;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 4px 8px 3px rgb(0 0 0 / 10%);
     margin: 30px 15px;
-    padding: 20px;
     border-radius: 10px;
 }
 .hidden_post{
     display: none;
-    display: flex;
 }
 
 .view_more_btn_container{
@@ -250,12 +249,22 @@ main {
 .blog {
     display: "";
 }
+.blog_title{
+    text-align: center;
+    font-variant: small-caps;
+    margin: 20px;
+}  
 
 figure > img{
     width: 100%;
     height: auto;
     cursor: pointer;
+    transition: 0.3s;
 }
+figure > img:hover{
+    opacity: 0.8;
+}
+
 .wp-block-media-text__content> h2{
     margin: 15px;
 }
@@ -264,33 +273,33 @@ figure > img{
     font: 1.6rem;
     font-weight: 500;
 }
-.modal_background{
+.myImg{
+    width: 300px;
+}
+.my_modal{
+    display: none;
     position: fixed;
-    width: 100%;
-    height: 100vh;
+    z-index: 1;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     background-color: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: visibility 0s, opacity 0.5s;
-    pointer-events: none;
-    opacity: 0;
 }
 
-.modal_background.show{
-    pointer-events: auto;
-    opacity: 1;
-}
-
-.modal{
-    background-color: white;
-    padding: 15px;
-    max-width: 80%;
+.modal_content{
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
 }
 .close_modal{
-    display: "";
+    transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    font-size: 2rem;
 }
 
 
@@ -356,7 +365,6 @@ figure > img{
     -webkit-box-shadow: 6px 6px 18px 0px rgba(50, 50, 50, 0.54);
     -moz-box-shadow:    6px 6px 18px 0px rgba(50, 50, 50, 0.54);
     box-shadow:         6px 6px 18px 0px rgba(50, 50, 50, 0.54);
-
 }
 
 input[type=text], textarea{
@@ -385,7 +393,6 @@ textarea{
     cursor: pointer;
 
 }
-
 
 label {
     padding: 12px 12px 2px 0;
@@ -472,15 +479,22 @@ footer{
 @media only screen and (min-width: 520px) {
     /*                                Home page  00000000000000000000000000000000000000000000000000000000000000        */
     .landing_page{
-        height: 250px;
+        height: 300px;
+        display: flex;
     }
     .slogan {
-        margin-top: 20px;
+        margin: 0 auto;
+        align-self: center;
+        font-weight: 800;
     }
-    
     .latest_post{
-        margin: 10px 130px;
-        padding: 25px;
+        margin: 10px 150px;
+        padding: 0px;
+        
+    }
+    .homepage_post_title{
+        padding: 10px;
+        margin-bottom: 40px;
     }
     
     .controller .arrow{
@@ -498,6 +512,9 @@ footer{
     .right{
         right: 12px;
     }
+    .controller ul{
+        bottom: 20px;
+    }
     
     /*                                                 Blog page   tablet                         */
     
@@ -505,7 +522,7 @@ footer{
         padding: 10px;
         margin: 10px;
         text-decoration: underline;
-        text-align: center;
+        text-align: center; 
     }
         
     .post_container{
@@ -520,6 +537,7 @@ footer{
 
         padding: 0;
     }
+    
 
     .blog_featured_img{
         width: 100%;
@@ -529,13 +547,10 @@ footer{
         display: none;
     }
     
-    /*                                                   Singel blog                                             */
-    
-    .blog_post_content{
-        display: "";
-    }
+    /*                                                   Singel blog                                             */  
     .blog {
-        display: "";
+        width: 70%;
+        margin: 0 auto;
     }
     figure > img{
         width: 100%;
@@ -550,32 +565,6 @@ footer{
         font-size: 1.2rem;
         margin-bottom: 40px;
     }
-    .modal_background{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: visibility 0s, opacity 0.5s;
-        pointer-events: none;
-        opacity: 0;
-    }
-    
-    .modal_background.show{
-        pointer-events: auto;
-        opacity: 1;
-    }
-    
-    .modal{
-        background-color: white;
-        padding: 10px;
-        max-width: 80%;
-    }
-
 }
 
 
@@ -588,7 +577,6 @@ footer{
         margin: 0 auto;
         position: absolute;
         margin: 2px 0px 0px 25px;
-
     }
     nav {
         background-color: #222;
@@ -625,19 +613,19 @@ footer{
 
     /*                                   homepage desktop                                       */
     .landing_page{
-        height: 270px;
+        height: 370px;
+        display: flex;
     }
     .slogan {
-        margin-top: 20px;
+        margin: 0 auto;
+        align-self: center;
+        font-weight: 800;
     }
     .carousel{
         width: "";
     }
-
     .latest_post{
-        margin: 10px 130px;
-        padding: 25px;
-
+        margin: 10px 250px;
     }
     
     .controller .arrow{
@@ -654,6 +642,9 @@ footer{
     }
     .right{
         right: 12px;
+    }
+    .controller ul{
+        bottom: 20px;
     }
 
     /*                                                 Blog page   desktop                         */
@@ -692,12 +683,12 @@ footer{
         display: "";
     }
     .blog {
-        display: "";
+        width: 60%;
+        margin: 0 auto;
     }
     figure > img{
-        width: 100%;
-        height: auto;
         cursor: pointer;
+        height: 10%;
     }
     .wp-block-media-text__content> h2{
         font-size: 1.7rem;
@@ -707,32 +698,16 @@ footer{
         font-size: 1.2rem;
         margin-bottom: 40px;
     }
-    .modal_background{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: visibility 0s, opacity 0.5s;
-        pointer-events: none;
-        opacity: 0;
-    }
-    
-    .modal_background.show{
-        pointer-events: auto;
-        opacity: 1;
-    }
-    
-    .modal{
-        background-color: white;
-        padding: 10px;
-        max-width: 80%;
-    }
+    /*                                  about         desktop                                 */
+    .about_text_container{
+        width: 70%;
+        margin: 0 auto;
 
+    }
+    /*                                  contact       desktop                            */
+    .contact_form{
+        width: 50%;
+    }
     /*                                   Footer       desktop                                 */
     
     footer{
@@ -793,8 +768,6 @@ footer{
 
 
 /*  
-
-silder nav 
 loading / error message
 
 
@@ -812,4 +785,5 @@ hover over, tekst nav footer, etc
 / singel blog style 
 / logo click tablet/nav
 /text inside blogs?
+
 */

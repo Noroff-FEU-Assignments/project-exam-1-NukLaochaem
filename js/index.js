@@ -78,3 +78,4 @@ arrowRight.addEventListener("click", function(){
     latestPost.style.transform = "translate(" + (sectionIndex) * -25 +"%)";
 })
 
+// tied to shorten the code but run into bugs 

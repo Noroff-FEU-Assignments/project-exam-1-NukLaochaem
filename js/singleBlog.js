@@ -34,12 +34,27 @@ async function api(){
         console.log(blogPost);
 
         post.innerHTML +=`  <div class="blog">
-                                <h1 class="blog_post_title">${blogPost.title.rendered}</h1>
+                                <h1 class="blog_title">${blogPost.title.rendered}</h1>
                                 <figure class="open_modal">${blogPost.content.rendered}</figure>
                             </div`
         title.innerHTML = `${blogPost.title.rendered}`
 
+        const imgClass = document.querySelectorAll(".wp-block-media-text__media")
+        const modalImg = document.querySelector(".modal_content")
+        const modal = document.querySelector(".my_modal");
+        console.log(imgClass);
+        
+        document.addEventListener("click", function (event) {
+            if (!event.target.matches("img")) return;
+            console.log(event.target);
 
+            modal.style.display = "block"
+            
+        }, false);
+
+        closeModal.addEventListener("click",()=>{
+            modal.style.display = ("none");
+        })
 
     } catch (error){
         console.log(error)
@@ -48,22 +63,25 @@ async function api(){
 }
 api()
 
-const open = document.querySelector(".open_modal");
-const modalBackGround = document.querySelector(".modal_background")
-const close = document.querySelector(".close_modal")
 
+const img = document.querySelector(".myImg")
+const modal = document.querySelector(".my_modal");
+const modalImg = document.querySelector(".modal_content")
 
+const closeModal = document.querySelector(".close_modal")
 
-document.querySelectorAll(".open_modal").forEach(open => {
-    open.addEventListener('click', event => {
-        modalBackGround.classList.add("show");
-    })
-})
+/*
+        document.querySelectorAll("").forEach(open => {
+            open.addEventListener('click', event => {
+                modalBackGround.style.display("block");
 
+            })
+        })
 
-close.addEventListener("click", ()=>{
-    modalBackGround.classList.remove("show");
-})
+        close.addEventListener("click", ()=>{
+            modal.style.display("none");
+        })
+*/
 
 
 
