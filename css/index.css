@@ -81,6 +81,11 @@ li > a{
     letter-spacing: 2px;
 }
 
+.current{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 /*                                                   home page                              */
 
 main {
@@ -88,12 +93,9 @@ main {
 }
 
 .latest_post_header{
-    padding: 20px;
     font-size: 1.8rem;
     display: none;
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    padding-left: 40px;
 }
 
 .latest_post{
@@ -169,9 +171,9 @@ main {
 
 
 .more_posts_container{
-    text-align: end;
+    text-align: center;
     padding: 20px;
-    margin: 30px 0;
+
     display: none;
 }
 .more_posts{
@@ -183,6 +185,41 @@ main {
     height: 30px;
     width: 90px;
     border-radius: 3px;
+}
+
+.travel_style_container{
+    padding: 40px;
+}
+.travel_style_text{
+    display: "";
+}
+.overtext{
+    color:grey;
+    font-size: 0.7rem;
+    margin-top: 20px;
+}
+.undertext{
+    color: grey ;
+    padding: 30px 0;
+}
+.travel_style_morepost, .travel_style_aboutus{
+    position: relative;
+    padding: 30px 0;
+}
+.riverside_text, .couple_text{
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+.riverside_img, .couple_img{
+    display: block;
+    width: 90%;
+    margin: auto;
 }
 
 /*                                                 Blog page                                     */
@@ -251,8 +288,8 @@ main {
 }
 .blog_title{
     text-align: center;
-    font-variant: small-caps;
     margin: 20px;
+    font-weight: 800;
 }  
 
 figure > img{
@@ -262,7 +299,7 @@ figure > img{
     transition: 0.3s;
 }
 figure > img:hover{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .wp-block-media-text__content> h2{
@@ -496,7 +533,9 @@ footer{
         padding: 10px;
         margin-bottom: 40px;
     }
-    
+    .more_posts_container{
+        margin: 30px 0;
+    }
     .controller .arrow{
         position: absolute;
         top: 120%;
@@ -516,6 +555,41 @@ footer{
         bottom: 20px;
     }
     
+.travel_style_container{
+    padding: 40px;
+}
+.travel_style_text{
+    width: 70%;
+    margin: 0 auto;
+}
+.overtext{
+    color:grey;
+    font-size: 0.7rem;
+    margin-top: 20px;
+}
+.undertext{
+    color: grey ;
+    padding: 30px 0;
+}
+.travel_style_morepost, .travel_style_aboutus{
+    position: relative;
+    padding: 30px 0;
+}
+.riverside_text, .couple_text{
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+.riverside_img, .couple_img{
+    display: block;
+    width: 70%;
+    margin: auto;
+}
     /*                                                 Blog page   tablet                         */
     
     .posts_header{
@@ -600,16 +674,12 @@ footer{
         padding: 5px;
     }
     li > a:hover{
-
         text-decoration: underline;
         text-underline-offset: 3px;
     }
-
     .hamburger{
         display: none;
     }
-
-
 
     /*                                   homepage desktop                                       */
     .landing_page{
@@ -625,9 +695,11 @@ footer{
         width: "";
     }
     .latest_post{
-        margin: 10px 250px;
+        margin: 20px 350px;
     }
-    
+    .home_featured_img{
+        width: 30%;
+    }
     .controller .arrow{
         position: absolute;
         top: 120%;
@@ -646,6 +718,36 @@ footer{
     .controller ul{
         bottom: 20px;
     }
+
+    .travel_style_container{
+        padding: 40px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .travel_style_text{
+        width: 80%;
+    }
+    .overtext{
+        color:grey;
+        font-size: 0.7rem;
+        margin-top: 20px;
+    }
+    .undertext{
+        color: grey ;
+        padding: 30px 0;
+    }
+    .travel_style_morepost, .travel_style_aboutus{
+        padding: 30px 0;
+    }
+    .riverside_text, .couple_text{
+        position: absolute;
+        padding: 30px;
+        top: 50%;
+        left: 50%;
+    }
+    .riverside_img, .couple_img{
+        width: 50%;
+    } 
 
     /*                                                 Blog page   desktop                         */
     
@@ -768,22 +870,24 @@ footer{
 
 
 /*  
-loading / error message
-
+loading / error message 
 
 modal
 
+on current page
 
 
-hover over, tekst nav footer, etc
 
+/singel blog header space between nav and content. and font style. | blog
 
-/singel blog header space
-/ contact color 
-/ loading footer got up 
-/ latest post rom 
-/ singel blog style 
-/ logo click tablet/nav
-/text inside blogs?
+/ contact color    | contact
+
+/ latest post blog size | home
+
+/ singel blog style  | single blog
+
+/ logo click tablet/nav mobile | Nav
+
+/text inside blogs? | all blogs home/blog page
 
 */
