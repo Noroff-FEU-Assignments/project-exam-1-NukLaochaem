@@ -82,7 +82,7 @@ li > a{
 }
 
 .current{
-    text-decoration: underline 4px;
+    text-decoration: underline 3px;
     text-underline-offset: 3px;
 }
 
@@ -674,7 +674,7 @@ footer{
         padding: 5px;
     }
     li > a:hover{
-        text-decoration: underline 4px;
+        text-decoration: underline 3px;
         text-underline-offset: 3px;
     }
     .hamburger{
