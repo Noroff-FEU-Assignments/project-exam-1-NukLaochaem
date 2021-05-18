@@ -39,21 +39,28 @@ async function api(){
                             </div`
         title.innerHTML = `${blogPost.title.rendered}`
 
-        const imgClass = document.querySelectorAll(".wp-block-media-text__media")
-        const modalImg = document.querySelector(".modal_content")
+
+        const imgClass = document.querySelectorAll(".wp-block-media-text__media");
         const modal = document.querySelector(".my_modal");
         console.log(imgClass);
         
+    
         document.addEventListener("click", function (event) {
             if (!event.target.matches("img")) return;
             console.log(event.target);
 
+            let imageClone =  event.target.cloneNode(true);
             modal.style.display = "block"
-            
+
+            imageClone.classList.add("modal_content")
+            modal.appendChild(imageClone);
+
+
         }, false);
 
         closeModal.addEventListener("click",()=>{
             modal.style.display = ("none");
+            document.querySelectorAll(".modal_content").forEach(img =>img.remove());
         })
 
     } catch (error){

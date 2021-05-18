@@ -26,7 +26,9 @@ async function api(){
                                         </a
                                     </div>`
             }
+            viewMore.style.display = "block"
         }
+        
     } catch (error){
         console.log(error)
         post.innerHTML = `<h4 class="error">Error! Something went wrong! Error has occurred.  </h4>`;

@@ -35,6 +35,7 @@ async function api(){
                                     <a href="singleBlog.html?id=${blogPost[i].id}">
                                     <img class="home_featured_img" src="${blogPost[i].featured_media_src_url}"></img>
                                     <h2 class="homepage_post_title">${blogPost[i].title.rendered}</h2>
+                                    <p class="latest_post_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illum aliquid quasi consectetur at velit vel, eum explicabo quae voluptatibus ut voluptatem qui ipsam, vero sit illo non tenetur? </p>
                                     </a
                                 </div>`
     }
