@@ -46,7 +46,7 @@ async function api(){
         
     
         document.addEventListener("click", function (event) {
-            if (!event.target.matches("img")) return;
+            if (!event.target.matches("figure img")) return;
             console.log(event.target);
 
             let imageClone =  event.target.cloneNode(true);

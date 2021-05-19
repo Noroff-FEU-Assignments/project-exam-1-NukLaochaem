@@ -40,13 +40,10 @@ const viewMore = document.querySelector(".view_more_Btn")
 viewMore.addEventListener("click", morePost)
 
 function morePost (event){
-    if(hiddenPost.style.display === "none"){
-        hiddenPost.style.display = "grid"
-        viewMore.innerHTML = "View less"
-    } else {
-        hiddenPost.style.display = "none";
-        viewMore.innerHTML = "View more"
+    if(hiddenPost.style.display = "grid"){
+        viewMore.style.display = "none"
     }
+    
 }
 console.log(morePost);
 
