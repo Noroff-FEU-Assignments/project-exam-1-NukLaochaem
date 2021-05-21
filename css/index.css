@@ -31,17 +31,17 @@ nav {
     display: none;
     opacity: 0.9;
 }
-
 /*                                                Nav                        */
 
 .logo_container{
     background-color: #222;
     position: relative;
+    text-align: center;
 }
 
-.logo_nav{
-    display: block;
+.logo_nav{ 
     margin: auto ;
+    cursor: pointer;
 }
 
 li > a{
@@ -68,9 +68,10 @@ li > a{
 .fa-bars{
     display: block;
     position: absolute;
+    cursor: pointer;
     color: white;
     left: 10px;
-    cursor: pointer;
+    top: 5px;
     padding: 10px;
 }
 
@@ -82,6 +83,14 @@ li > a{
 .current{
     text-decoration: underline 3px;
     text-underline-offset: 3px;
+}
+.loader_error{
+    margin: 50px 0;
+    height: 250px;
+    color: red;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 /*                                                   home page                              */
@@ -237,6 +246,47 @@ main {
     width: 90%;
     margin: auto;
 }
+.loader,.loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loader {
+    margin: 160px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(131, 131, 131, 0.2);
+    border-right: 1.1em solid rgba(131, 131, 131, 0.2);
+    border-bottom: 1.1em solid rgba(131, 131, 131, 0.2);
+    border-left: 1.1em solid #383838;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 
 /*                                                 Blog page                                     */
 
@@ -347,15 +397,23 @@ figure > img:hover{
 .modal_content{
     width: 80%;
     height: auto;
+    margin: 50px     auto;
+    display: block;
 }
 .close_modal{
     transition: 0.3s;
-    font-size: 2rem;
+    font-size: 2.5rem;
     position: absolute;
     cursor: pointer;
+    padding: 5px;
     color: white;
     bottom: 32%;
-    right: 5%;
+    right: 10%;
+}
+.single_blog_error{
+    text-align: center;
+    margin: 200px auto;
+    color: red;
 }
 
 
@@ -685,14 +743,18 @@ footer{
 
 @media only screen and (min-width: 980px) {
     /*                                                Nav        2222222222222222222222222222222                */
+    
+    .logo_container{
+        text-align: inherit;
+    }
     .logo_nav{
-        margin: 0 auto;
         position: absolute;
-        margin-left: 25px;
+        margin: 2px 0 0 40px;
+        height: 45px;
     }
     nav {
         background-color: #222;
-        padding: 10px;
+        padding: 7px;
         display: block;
         opacity: 1;
         width: 100%;
@@ -838,24 +900,21 @@ footer{
         font-style: oblique;
     }
     .wp-block-media-text__content> p{
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 40px;
     }
     .modal_content{
         width: 40%;
         height: auto;
-        position: relative;
-        left: 30%;
-        top: 10%;
+        margin: auto;
+        margin-top: 60px;
     }
     .close_modal{
-        transition: 0.3s;
         font-size: 2rem;
-        cursor: pointer;
-        position: absolute;
-        top: 15%;
-        right: 26%;
-        
+        padding: 5px;
+        top: 45%;
+        right: 26%;        
+
     }
     /*                                          about         desktop                                 */
     .about_text_container{
@@ -923,19 +982,8 @@ footer{
     }
 }
 
-
 /*  
-/ loading / error message 
-
-/  modal image
 
 / singel blog style/image  | single blog
-
-
-
-
-
-/ logo click tablet/nav mobile | Nav
-
 
 */

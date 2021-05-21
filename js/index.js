@@ -1,8 +1,6 @@
-const hamburger = document.querySelector(".fa-bars")
-const nav = document.querySelector("nav")
-
-
-hamburger.addEventListener("click", openClose)
+const hamburger = document.querySelector(".fa-bars");
+const nav = document.querySelector("nav");
+hamburger.addEventListener("click", openClose);
 
 function openClose(event){
     if(nav.style.display === "block"){
@@ -10,6 +8,13 @@ function openClose(event){
     } else {
         nav.style.display = "block"
     }
+}
+
+const logoNav = document.querySelector(".logo_nav")
+logoNav.addEventListener("click", homeBtn);
+
+function homeBtn(event){
+    window.location = '/';
 }
 
 const corsFix = "https://noroffcors.herokuapp.com/"
@@ -27,7 +32,7 @@ async function api(){
 
         console.log(blogPost);
 
-    for(let i = 0; i < blogPost.length; i++){
+        for(let i = 0; i < blogPost.length; i++){
         if(i===4){
             break;
         }
@@ -38,12 +43,13 @@ async function api(){
                                     <p class="latest_post_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illum aliquid quasi consectetur at velit vel, eum explicabo quae voluptatibus ut voluptatem qui ipsam, vero sit illo non tenetur? </p>
                                     </a
                                 </div>`
-    }
-    morePost.style.display = "block"
-    latestPostHeader.style.display = "block"
+                                morePost.style.display = "block"
+                                latestPostHeader.style.display = "block"
+        }
+
     } catch (error){
         console.log(error)
-        latestPost.innerHTML = `<h4 class="error">Error! Something went wrong! Error has occurred.  </h4>`;
+        latestPostH.innerHTML += `<h4 class="loader_error">Error! Something went wrong. Cannot load the the latest posts</h4>`;
     }
 }
 api()

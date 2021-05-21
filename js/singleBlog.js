@@ -32,12 +32,13 @@ async function api(){
         const response = await fetch(wordPress);
         const blogPost = await response.json(response);
         console.log(blogPost);
+        post.innerHTML="";
 
         post.innerHTML +=`  <div class="blog">
                                 <h1 class="blog_title">${blogPost.title.rendered}</h1>
                                 <figure class="open_modal">${blogPost.content.rendered}</figure>
                             </div`
-        title.innerHTML = `${blogPost.title.rendered}`
+        title.innerHTML += `${blogPost.title.rendered}`
 
 
         const imgClass = document.querySelectorAll(".wp-block-media-text__media");
@@ -50,9 +51,9 @@ async function api(){
             console.log(event.target);
 
             let imageClone =  event.target.cloneNode(true);
-            modal.style.display = "block"
+            modal.style.display = "block";
 
-            imageClone.classList.add("modal_content")
+            imageClone.classList.add("modal_content");
             modal.appendChild(imageClone);
 
 
@@ -65,7 +66,8 @@ async function api(){
 
     } catch (error){
         console.log(error)
-        post.innerHTML += `<h4 class="">Error! Something went wrong! Error has occurred.</h4>`;
+        post.innerHTML = "";
+        post.innerHTML += `<h4 class="single_blog_error">Error has occurred, Cannot load the page. Please try again later</h4>`;
     }
 }
 api()
@@ -89,6 +91,14 @@ const closeModal = document.querySelector(".close_modal")
             modal.style.display("none");
         })
 */
+
+const logoNav = document.querySelector(".logo_nav")
+
+logoNav.addEventListener("click", homeBtn);
+
+function homeBtn(event){
+    window.location = '/';
+}
 
 
 

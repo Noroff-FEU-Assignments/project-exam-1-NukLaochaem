@@ -4,12 +4,17 @@ const wordPress = corsFix + wordPressBlogs;
 
 const post = document.querySelector(".posts")
 const hiddenPost = document.querySelector(".hidden_post")
+const postHeader = document.querySelector(".posts_header")
+const loader = document.querySelector(".loader")
 
 async function api(){
     try{
         const response = await fetch(wordPress);
         const blogPost = await response.json(response);
         console.log(blogPost);
+
+        post.innerHTML = "";
+
         for(let i = 0; i < blogPost.length; i++){
             if(i > 7){
                 hiddenPost.innerHTML +=`<div class="blog_post">
@@ -27,11 +32,12 @@ async function api(){
                                     </div>`
             }
             viewMore.style.display = "block"
+            postHeader.style.display = "block"
         }
         
     } catch (error){
         console.log(error)
-        post.innerHTML = `<h4 class="error">Error! Something went wrong! Error has occurred.  </h4>`;
+        postHeader.innerHTML += `<h4 class="loader_error">Error has occurred, Cannot load the page. Please try again later</h4>`;
     }
 }
 
@@ -48,8 +54,6 @@ function morePost (event){
 console.log(morePost);
 
 
-
-
 const hamburger = document.querySelector(".fa-bars")
 const nav = document.querySelector("nav")
 
@@ -62,4 +66,13 @@ function openClose(event){
     } else {
         nav.style.display = "block"
     }
+}
+
+
+const logoNav = document.querySelector(".logo_nav")
+
+logoNav.addEventListener("click", homeBtn);
+
+function homeBtn(event){
+    window.location = '/';
 }

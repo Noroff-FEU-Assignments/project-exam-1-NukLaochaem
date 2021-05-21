@@ -73,3 +73,13 @@ function validateEmail(email){
     const emailPattern = regEx.test(email);
     return emailPattern;
 }
+
+
+
+const logoNav = document.querySelector(".logo_nav")
+
+logoNav.addEventListener("click", homeBtn);
+
+function homeBtn(event){
+    window.location = '/';
+}
