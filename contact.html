@@ -44,9 +44,9 @@
             <div class="background">
                 <div class="contact_background">
                     <div class="contact_container">
-                        <form class="contact_form" action="">
+                        <form class="contact_form" action="action_page.php" method="GET">
                             <h1 class="contact_header">Contact Us</h1>
-                            <label for="fullname">Full Name<span class="fullname_error error">*Must be at least 5 characters in length</span></label>
+                            <label for="name">Full Name<span class="fullname_error error">*Must be at least 5 characters in length</span></label>
                             <input type="text" id="full_name" name="fullname" placeholder="Your name">
             
                             <label for="email">Email<span class="email_error error">*Please enter a valid email address</span></label>
@@ -62,7 +62,6 @@
                     </div>
                 </div>
             </div>
-            
         </main>
 
 
@@ -84,9 +83,9 @@
 
                 <div class="footer_newletters">
                     <h3>Follow our Journey</h3>
-                    <form class="footer_form" action="">
-                        <input type="emailSub" placeholder="Your Email Address" id="emailSub">
-                        <input type="sub_button" value="Subscribe" id="sub_button">
+                    <form class="footer_form" action="/action_page.php" method="GET">
+                        <input type="email" placeholder="Your Email Address" id="email_sub">
+                        <input type="submit" value="Subscribe" id="sub_button">
                     </form>
                 </div>
             </div>

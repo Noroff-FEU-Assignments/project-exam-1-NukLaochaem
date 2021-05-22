@@ -40,12 +40,10 @@ async function api(){
                             </div`
         title.innerHTML += `${blogPost.title.rendered}`
 
-
         const imgClass = document.querySelectorAll(".wp-block-media-text__media");
         const modal = document.querySelector(".my_modal");
         console.log(imgClass);
         
-    
         document.addEventListener("click", function (event) {
             if (!event.target.matches("figure img")) return;
             console.log(event.target);
@@ -55,7 +53,6 @@ async function api(){
 
             imageClone.classList.add("modal_content");
             modal.appendChild(imageClone);
-
 
         }, false);
 

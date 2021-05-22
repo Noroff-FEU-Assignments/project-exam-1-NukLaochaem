@@ -31,6 +31,14 @@ nav {
     display: none;
     opacity: 0.9;
 }
+
+:root{
+    --nav-footer-color: #222;
+    --grey-text-color: rgb(129, 129, 129);
+    --button-color: rgb(63, 63, 63);
+    --contact-color:  rgb(255, 123, 0);
+
+}
 /*                                                Nav                        */
 
 .logo_container{
@@ -112,7 +120,7 @@ main {
 
 .latest_post{
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 4px 8px 3px rgb(0 0 0 / 7%);
-    margin: 80px;
+    margin: 50px;
     border-radius: 10px;
 }
 
@@ -131,7 +139,7 @@ main {
 
 .latest_post_text{
     display: block;
-    color: grey;
+    color: var(--grey-text-color);
     padding: 0px 20px 10px 20px;
     
 }
@@ -172,7 +180,7 @@ main {
 
 .controller ul{
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     left: 50%;
     transform: translate(-50%);
     list-style: none;
@@ -202,7 +210,7 @@ main {
     font-size: 1rem;
     font-weight: 500;
     padding: 8px;
-    background-color: rgb(63, 63, 63);
+    background-color: var(--button-color);
     color: white;
     height: 30px;
     width: 90px;
@@ -219,12 +227,12 @@ main {
     display: "";
 }
 .overtext{
-    color:grey;
+    color: var(--grey-text-color);
     font-size: 0.7rem;
     margin-top: 20px;
 }
 .undertext{
-    color: grey ;
+    color:  var(--grey-text-color) ;
     padding: 30px 0;
 }
 .travel_style_morepost, .travel_style_aboutus{
@@ -240,10 +248,11 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 500;
+    text-align: center;
 }
 .riverside_img, .couple_img{
     display: block;
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 .loader,.loader:after {
@@ -342,7 +351,7 @@ main {
     font-weight: 500;
     border: none;
     padding: 8px;
-    background-color: rgb(63, 63, 63);
+    background-color: var(--button-color);
     color: white;
     text-align: center;
     cursor: pointer;
@@ -439,11 +448,11 @@ figure > img:hover{
 }
 
 .about_info_container{
-    background-color: #fdfbfb;
+    background-color: white;
 }
 
 .about_info, .about_info2{
-    padding: 10px 0;
+    padding: 10px;
 }
 
 /*                                                  Contact                                  */
@@ -457,7 +466,7 @@ figure > img:hover{
     font-size: 1.7rem;
     font-weight: 800;
     padding-top: 10px;
-    color: rgb(255, 123, 0);
+    color: var(--contact-color);
 }
 
 .background{
@@ -496,13 +505,16 @@ input[type=text], textarea:focus{
 textarea{
     height: 140px;
 }
-
+#message{
+    font-family: nunito;
+    color: black;
+}
 #sumbit_contact{
     width: 100%;
     padding: 12px 12px 12px 12px;
     margin: 10px 0 0px 0;
     border-radius: 4px;
-    background-color: rgb(255, 123, 0);
+    background-color: var(--contact-color);
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -519,7 +531,7 @@ label {
     display: inline-block;
     margin-left: 6px;
     font-weight: 700;
-    color: rgb(255, 123, 0);
+    color: var(--contact-color);
 }
 
 .error{
@@ -579,7 +591,7 @@ footer{
     padding: 5px 0;
 }
 
-#emailSub {
+#email_sub {
     padding: 4px;
     border: none;
     border-radius: 3px;
@@ -589,7 +601,7 @@ footer{
     padding: 4px;
     border: none;
     border-radius: 3px;
-    background-color:#ee4d42;
+    background-color: red;
     color: white;
     text-align: center;
     cursor: pointer;
@@ -639,10 +651,10 @@ footer{
         top: 45%;
     }
     .left{
-        left: 12px;
+        left: 10%;
     }
     .right{
-        right: 12px;
+        right: 10%;
     }
     .controller ul{
         bottom: 10px;
@@ -657,12 +669,10 @@ footer{
         margin: 0 auto;
     }
     .overtext{
-        color:grey;
         font-size: 0.7rem;
         margin-top: 20px;
     }
     .undertext{
-        color: grey ;
         padding: 30px 0;
     }
     .travel_style_morepost, .travel_style_aboutus{
@@ -810,10 +820,10 @@ footer{
         top: 50%;
     }
     .left{
-        left: 12px;
+        left: 15%;
     }
     .right{
-        right: 12px;
+        right: 15%;
     }
     .controller ul{
         bottom: 30px;
@@ -828,12 +838,11 @@ footer{
         width: 80%;
     }
     .overtext{
-        color:grey;
+
         font-size: 0.7rem;
         margin-top: 20px;
     }
     .undertext{
-        color: grey ;
         padding: 30px 0;
     }
     .travel_style_morepost, .travel_style_aboutus{
@@ -916,7 +925,7 @@ footer{
         right: 26%;        
 
     }
-    /*                                          about         desktop                                 */
+    /*                                              about         desktop                                 */
     .about_text_container{
         width: 70%;
         margin: 0 auto;
@@ -926,7 +935,7 @@ footer{
     .contact_form{
         width: 40%;
     }
-    /*                                          Footer       desktop                                 */
+    /*                                              Footer       desktop                                 */
     
     footer{
         background-color: #222;
@@ -980,10 +989,18 @@ footer{
         padding: 5px 0;
         margin-top: 10px;
     }
+    .rounded {
+        border-top: 2px solid #bbb;
+        border-radius: 5px;
+        margin: 20px;
+    }
 }
 
-/*  
+/*
+fikse blog page, loader og height
 
-/ singel blog style/image  | single blog
+singleblogg style 
 
+
+WCAG 
 */
