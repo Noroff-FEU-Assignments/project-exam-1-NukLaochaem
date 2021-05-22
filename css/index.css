@@ -94,7 +94,7 @@ li > a{
 }
 .loader_error{
     margin: 50px 0;
-    height: 250px;
+    height: 200px;
     color: red;
     font-size: 1.1rem;
     font-weight: 600;
@@ -368,7 +368,7 @@ main {
 }
 .blog_title{
     text-align: center;
-    margin: 20px;
+    padding: 20px;
     font-weight: 800;
 }  
 
@@ -386,7 +386,7 @@ figure > img:hover{
     margin: 15px;
 }
 .wp-block-media-text__content> p{
-    margin: 20px;
+    padding: 15px;
     font: 1.6rem;
     font-weight: 500;
 }
@@ -453,6 +453,12 @@ figure > img:hover{
 
 .about_info, .about_info2{
     padding: 10px;
+}
+.about_line{
+    border-top: 2px solid rgb(161, 161, 161);
+    border-radius: 5px;
+    margin: 10px 30px;
+    height: 2px;
 }
 
 /*                                                  Contact                                  */
@@ -739,11 +745,17 @@ footer{
     }
     .wp-block-media-text__content> h2{
         font-size: 1.7rem;
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .wp-block-media-text__content> p{
         font-size: 1.2rem;
-        margin-bottom: 40px;
+        padding-bottom: 40px;
+    }
+    .about_line{
+        border-top: 2px solid rgb(161, 161, 161);
+        border-radius: 5px;
+        margin: 10px 50px;
+        height: 2px;
     }
 }
 
@@ -894,10 +906,11 @@ footer{
     .blog {
         width: 60%;
         margin: 0 auto;
-
+        background-color: white;
+        box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
     }
     figure > img{
-        width: 80%;
+        width: 70%;
         height: auto;
         cursor: pointer;
         display: block;
@@ -906,11 +919,12 @@ footer{
     .wp-block-media-text__content> h2{
         font-size: 1.4rem;
         margin-top: 30px;
+        margin-left: 30px;
         font-style: oblique;
     }
     .wp-block-media-text__content> p{
         font-size: 1rem;
-        margin-bottom: 40px;
+        padding: 20px 30px 30px 30px;
     }
     .modal_content{
         width: 40%;
@@ -923,7 +937,10 @@ footer{
         padding: 5px;
         top: 45%;
         right: 26%;        
+    }
 
+    .background_blog{
+        background-color: rgb(235, 235, 235);
     }
     /*                                              about         desktop                                 */
     .about_text_container{
@@ -934,6 +951,11 @@ footer{
     /*                                             contact       desktop                            */
     .contact_form{
         width: 40%;
+    }
+    .about_line {
+        border-top: 2px solid rgb(133, 133, 133);
+        border-radius: 5px;
+        margin: 30px 50px;
     }
     /*                                              Footer       desktop                                 */
     
@@ -976,7 +998,6 @@ footer{
         padding: 10px 10px;
         margin: 10px 0 0 7px;
         cursor: pointer;
-
     }
 
     .footer_newletters{
@@ -989,18 +1010,11 @@ footer{
         padding: 5px 0;
         margin-top: 10px;
     }
-    .rounded {
-        border-top: 2px solid #bbb;
-        border-radius: 5px;
-        margin: 20px;
-    }
 }
 
 /*
 fikse blog page, loader og height
 
-singleblogg style 
+tegne wireframe
 
-
-WCAG 
 */

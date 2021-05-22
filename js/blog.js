@@ -14,6 +14,7 @@ async function api(){
         console.log(blogPost);
 
         post.innerHTML = "";
+        loader.style.display = "none";
 
         for(let i = 0; i < blogPost.length; i++){
             if(i > 7){
@@ -33,10 +34,13 @@ async function api(){
             }
             viewMore.style.display = "block"
             postHeader.style.display = "block"
+
         }
         
     } catch (error){
         console.log(error)
+        post.innerHTML = "";
+        loader.style.display = "none";
         postHeader.innerHTML += `<h4 class="loader_error">Error has occurred, Cannot load the page. Please try again later</h4>`;
     }
 }
