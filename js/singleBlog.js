@@ -38,7 +38,7 @@ async function api(){
                                 <h1 class="blog_title">${blogPost.title.rendered}</h1>
                                 <figure class="open_modal">${blogPost.content.rendered}</figure>
                             </div`
-        title.innerHTML += `${blogPost.title.rendered}`
+        title.innerHTML = `${blogPost.title.rendered}`
 
         const imgClass = document.querySelectorAll(".wp-block-media-text__media");
         const modal = document.querySelector(".my_modal");
