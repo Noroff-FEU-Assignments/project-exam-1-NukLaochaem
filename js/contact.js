@@ -14,7 +14,7 @@ function openClose(event){
 
 
 
-const fullName = document.querySelector("#full_name")
+const fullName = document.querySelector("#fullname")
 const nameError = document.querySelector(".fullname_error")
 
 const email = document.querySelector("#email")
@@ -29,6 +29,7 @@ const messageError = document.querySelector(".message_error")
 
 const form = document.querySelector(".contact_form")
 const sumbit = document.querySelector("#sumbit_contact")
+
 
 function validateCheck (event){
     event.preventDefault();

@@ -317,7 +317,7 @@ main {
 }
 
 .blog_post_title{
-    margin: 15px;
+    padding: 15px;
     color: black;
 
 }
@@ -386,7 +386,7 @@ figure > img:hover{
     margin: 15px;
 }
 .wp-block-media-text__content> p{
-    padding: 15px;
+    padding: 0px 15px 15px 15px;
     font: 1.6rem;
     font-weight: 500;
 }
@@ -924,7 +924,7 @@ footer{
     }
     .wp-block-media-text__content> p{
         font-size: 1rem;
-        padding: 20px 30px 30px 30px;
+        padding: 0px 30px 30px 30px;
     }
     .modal_content{
         width: 40%;

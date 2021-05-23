@@ -12,7 +12,6 @@
     <script src="https://kit.fontawesome.com/95eeee5aab.js" crossorigin="anonymous"></script>
     </head>
 
-
     <body>
             <div class="logo_container">
                 <div class="hamburger"><i class="fas fa-bars fa-2x"></i></div>
@@ -32,7 +31,7 @@
             <div class="background">
                 <div class="contact_background">
                     <div class="contact_container">
-                        <form class="contact_form" action="action_page.php" method="GET">
+                        <form class="contact_form">
                             <h1 class="contact_header">Contact Us</h1>
                             <label for="fullname">Full Name<span class="fullname_error error">*Must be at least 5 characters in length</span></label>
                             <input type="text" id="fullname" name="fullname" placeholder="Your name">
@@ -45,7 +44,9 @@
             
                             <label for="message">Message <span class="message_error error">*Message must be minium 25 characters</span></label>
                             <textarea name="message" id="message" placeholder="Your message.."></textarea>
+
                             <input type="submit" value="Send" id="sumbit_contact">
+                            
                         </form>
                     </div>
                 </div>
@@ -71,7 +72,7 @@
 
                 <div class="footer_newletters">
                     <h3>Follow our Journey</h3>
-                    <form class="footer_form" action="/action_page.php" method="GET">
+                    <form class="footer_form" >
                         <input type="email" placeholder="Your Email Address" id="email_sub">
                         <input type="submit" value="Subscribe" id="sub_button">
                     </form>
