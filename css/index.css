@@ -28,15 +28,16 @@ nav {
     width: 50%;
     z-index: 1;
     position: absolute;
+    text-align: center;
     display: none;
-    opacity: 0.9;
+
 }
 
 :root{
     --nav-footer-color: #222;
     --grey-text-color: rgb(129, 129, 129);
     --button-color: rgb(63, 63, 63);
-    --contact-color:  rgb(255, 123, 0);
+    --contact-color:  black;
 
 }
 /*                                                Nav                        */
@@ -232,7 +233,7 @@ main {
     margin-top: 20px;
 }
 .undertext{
-    color:  var(--grey-text-color) ;
+    color:  #333 ;
     padding: 30px 0;
 }
 .travel_style_morepost, .travel_style_aboutus{
@@ -436,15 +437,20 @@ figure > img:hover{
     background-position: center;
     height: 330px;
 }
-
-.about_header{
+.h1_about_us{
+    font-size: 1.4rem;
     text-align: center;
-    align-items: center;
-    color: white;
+    padding-top: 10px;
+    font-weight: 700;
+}
+.about_header{
+    font-size: 1.2rem;
+    padding: 10px 0;
+    font-weight: 600;
 }
 
 .about_text_container{
-    padding: 25px;
+    padding: 0px 25px 25px 25px;
 }
 
 .about_info_container{
@@ -520,7 +526,7 @@ textarea{
     padding: 12px 12px 12px 12px;
     margin: 10px 0 0px 0;
     border-radius: 4px;
-    background-color: var(--contact-color);
+    background-color: rgb(255, 153, 0);
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -529,19 +535,18 @@ textarea{
 #sumbit_contact:hover{
     cursor: pointer;
     color: white;
-    background-color: rgb(252, 188, 129);
+    background-color: rgb(255, 184, 77);
 }
 
 label {
     padding: 12px 12px 2px 0;
     display: inline-block;
     margin-left: 6px;
-    font-weight: 700;
-    color: var(--contact-color);
+    font-weight: 600;
 }
 
 .error{
-    color: black;
+    color: red;
     font-size: 0.7rem;
     margin: 0px 10px;
     display: inline-block;
@@ -561,6 +566,7 @@ footer{
 }
 
 .siamTravel_footer{
+    font-size: 1.2rem;
     padding: 5px 0;
     border-bottom: white 1px solid;
 }
@@ -578,6 +584,9 @@ footer{
 }
 .footer_sosial_media{
     padding: 10px 0;
+}
+.footer_sosial_media h3{
+    font-size: 1.1rem;
 }
 .footer_sosial_media i:hover{
     text-decoration: underline 2px;
